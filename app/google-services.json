@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "814151478667",
+    "firebase_url": "https://telrosapps-default-rtdb.firebaseio.com",
+    "project_id": "telrosapps",
+    "storage_bucket": "telrosapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814151478667:android:4a22368df18ba73076538e",
+        "android_client_info": {
+          "package_name": "ru.startandroid.telrosapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814151478667-obahm273sh56lngr278ujj7rjhtm1o0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBItLPl6EHWtIL6Fe7OK1xswlNjkcUYIb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814151478667-obahm273sh56lngr278ujj7rjhtm1o0v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
