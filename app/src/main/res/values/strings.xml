@@ -1,13 +1,18 @@
 <resources>
     <string name="app_name">TelrosApps</string>
-    <string name="login">login</string>
-    <string name="patronymic">Patronymic</string>
-    <string name="date_of_birth">Date of birth</string>
-    <string name="email">Email</string>
-    <string name="phone_number">Phone number</string>
-    <string name="password">Password</string>
+    <string name="login">Войти</string>
+    <string name="patronymic">Отчество</string>
+    <string name="date_of_birth">Дата Рождения</string>
+    <string name="email">Электронная почта</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="password">Пароль</string>
     <string name="full_name">Full name</string>
     <string name="telros_form">Telros form</string>
-    <string name="register_user">Register User</string>
+    <string name="register_user">Зарегистрироваться</string>
     <string name="telros">Telros</string>
+    <string name="fullName">Фамилия</string>
+    <string name="fullName2">Имя</string>
+    <string name="emailF">Электронная почта</string>
+    <string name="forgotPassword">Забыли пароль?</string>
+    <string name="register">Регистрация</string>
 </resources>
