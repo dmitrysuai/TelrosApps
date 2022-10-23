@@ -18,10 +18,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private TextView banner, registerUser;
-    private EditText editTextFullName, editTextPassword, editTextPatronymic, editTextDateOfBirth, editTextEmailRegister, editTextPhone, editTextFullName2;
+    private EditText editTextFullName, editTextPassword, editTextPatronymic, editTextDateOfBirth, editTextEmail, editTextPhone, editTextFullName2;
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
@@ -42,7 +44,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         editTextPassword =(EditText) findViewById(R.id.password);
         editTextPatronymic =(EditText) findViewById(R.id.patronymic);
         editTextDateOfBirth =(EditText) findViewById(R.id.dateOfBirth);
-        editTextEmailRegister =(EditText) findViewById(R.id.emailRegister);
+        editTextEmail =(EditText) findViewById(R.id.email);
         editTextPhone =(EditText) findViewById(R.id.phone);
         editTextFullName2 =(EditText) findViewById(R.id.fullName2);
 
@@ -62,11 +64,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
          }
     }
     private void registerUser(){
-        String email = editTextEmailRegister.getText().toString().trim();
+        String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         String patronymic =editTextPatronymic.getText().toString().trim();
         String dateOfBirth = editTextDateOfBirth.getText().toString().trim();
-        String emailRegister = editTextEmailRegister.getText().toString().trim();
         String phone = editTextPhone.getText().toString().trim();
         String fullName = editTextFullName.getText().toString().trim();
         String fullName2 = editTextFullName2.getText().toString().trim();
@@ -91,9 +92,9 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             editTextDateOfBirth.requestFocus();
             return;
         }
-        if (emailRegister.isEmpty()){
-            editTextEmailRegister.setError("Поле не заполнено!");
-            editTextEmailRegister.requestFocus();
+        if (email.isEmpty()){
+            editTextEmail.setError("Поле не заполнено!");
+            editTextEmail.requestFocus();
             return;
         }
         if (phone.isEmpty()){
@@ -115,10 +116,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(fullName, dateOfBirth, email, password, fullName2, emailRegister, patronymic, phone);
+                            User user = new User(fullName, dateOfBirth, email, password, fullName2, patronymic, phone);
 
                             FirebaseDatabase.getInstance().getReference("Users")                    // подключение к базе данных
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {

@@ -89,12 +89,12 @@
         />
 
     <EditText
-        android:id="@+id/emailRegister"
+        android:id="@+id/email"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/email1"
         android:inputType="textEmailAddress"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.483"
@@ -114,7 +114,7 @@
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         />
     <Button
         android:id="@+id/registerUser"

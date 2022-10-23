@@ -3,7 +3,7 @@
     <string name="login">Войти</string>
     <string name="patronymic">Отчество</string>
     <string name="date_of_birth">Дата Рождения</string>
-    <string name="email">Электронная почта</string>
+    <string name="email1">Электронная почта</string>
     <string name="phone_number">Номер телефона</string>
     <string name="password">Пароль</string>
     <string name="full_name">Full name</string>
